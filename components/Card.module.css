@@ -1,0 +1,203 @@
+.card {
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(135deg, transparent, var(--color-border-glow), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.linkWrapper {
+    display: block;
+    height: 100%;
+}
+
+.linkWrapper:hover .card {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-border-glow);
+}
+
+.tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-primary), #1a2f9f);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(43, 68, 216, 0.3);
+}
+
+.title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+}
+
+.date {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.author {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(43, 68, 216, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(43, 68, 216, 0.2);
+}
+
+.author::before {
+    content: '✍️';
+    font-size: 1rem;
+}
+
+.description {
+    color: var(--color-text-body);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.collapsed {
+    max-height: 3.6em;
+    overflow: hidden;
+    position: relative;
+}
+
+.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.5em;
+    background: linear-gradient(to bottom, transparent, var(--color-bg-glass));
+    pointer-events: none;
+}
+
+.expanded {
+    max-height: none;
+    animation: expandAnimation 0.3s ease-out;
+}
+
+@keyframes expandAnimation {
+    from {
+        max-height: 3.6em;
+        opacity: 0.8;
+    }
+
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+.expandButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1px solid var(--color-border-glow);
+    color: var(--color-accent-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(43, 68, 216, 0.1);
+}
+
+.expandButton:hover {
+    background: rgba(43, 68, 216, 0.1);
+    box-shadow: 0 0 15px rgba(43, 68, 216, 0.3);
+    transform: translateY(-2px);
+}
+
+.expandButton:focus {
+    outline: 2px solid var(--color-accent-blue);
+    outline-offset: 2px;
+}
+
+.chevron {
+    transition: transform 0.3s ease;
+}
+
+.chevron.rotated {
+    transform: rotate(180deg);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.readMore {
+    display: flex;
+    align-items: center;
+    color: var(--color-accent-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.icon {
+    margin-left: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.linkWrapper:hover .icon {
+    transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .expandButton,
+    .chevron,
+    .icon {
+        transition: none;
+        animation: none;
+    }
+
+    .linkWrapper:hover .card {
+        transform: none;
+    }
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "title": "Getting Started with Godot 4",
+        "slug": "getting-started-godot-4",
+        "excerpt": "A comprehensive guide to setting up your first project in Godot 4.",
+        "content": "Godot 4 is here and it's amazing. In this post, we'll explore the new features...",
+        "date": "2024-11-20",
+        "author": "Asil",
+        "type": "blog"
+    },
+    {
+        "id": "2",
+        "title": "The Art of Pixel Art",
+        "slug": "art-of-pixel-art",
+        "excerpt": "Tips and tricks for creating stunning pixel art for your indie games.",
+        "content": "Pixel art is timeless. Here are some techniques to improve your sprites...",
+        "date": "2024-11-15",
+        "author": "PixelMaster",
+        "type": "blog"
+    },
+    {
+        "id": "3",
+        "title": "Community Server Maintenance",
+        "slug": "server-maintenance-nov",
+        "excerpt": "Discord server will be down for maintenance on Nov 30.",
+        "content": "We are upgrading our bots. Expect some downtime on Sunday.",
+        "date": "2024-11-25",
+        "author": "Admin",
+        "type": "announcement"
+    },
+    {
+        "id": "4",
+        "title": "Winter Jam Theme Voting",
+        "slug": "winter-jam-voting",
+        "excerpt": "Vote for the theme of the upcoming Winter Jam!",
+        "content": "Head over to the #announcements channel in Discord to vote.",
+        "date": "2024-11-24",
+        "author": "Admin",
+        "type": "announcement"
+    }
+]

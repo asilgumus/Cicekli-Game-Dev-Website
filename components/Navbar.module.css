@@ -1,0 +1,127 @@
+.navbar {
+    background-color: var(--color-bg-glass);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border-subtle);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-depth);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.logo:hover {
+    color: var(--color-primary);
+}
+
+.logoIcon {
+    color: var(--color-primary);
+    filter: drop-shadow(0 0 8px rgba(43, 68, 216, 0.5));
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.link {
+    font-weight: 500;
+    color: var(--color-text-body);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.2s ease;
+}
+
+.link:hover {
+    color: var(--color-text-main);
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.desktopCta {
+    display: block;
+}
+
+.mobileCta {
+    display: none;
+}
+
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-main);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.menuToggle:hover {
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .menuToggle {
+        display: block;
+    }
+
+    .desktopCta {
+        display: none;
+    }
+
+    .navLinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-bg-secondary);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--color-border-subtle);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+    }
+
+    .navLinks.active {
+        transform: translateY(0);
+        box-shadow: var(--shadow-depth);
+    }
+
+    .mobileCta {
+        display: block;
+        margin-top: 1rem;
+    }
+}

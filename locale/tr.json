@@ -1,0 +1,84 @@
+{
+    "common": {
+        "loading": "Yükleniyor...",
+        "error": "Bir hata oluştu",
+        "success": "Başarılı!",
+        "readMore": "Devamını Oku",
+        "readLess": "Daha Az",
+        "back": "Geri Dön",
+        "backTo": "Geri Dön:",
+        "save": "Kaydet",
+        "publish": "Yayınla",
+        "membersOnly": "Sadece Üyeler",
+        "openToAll": "Herkese Açık",
+        "community": "Topluluk",
+        "author": "Yazar"
+    },
+    "nav": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımızda",
+        "events": "Etkinlikler",
+        "blog": "Blog",
+        "announcements": "Duyurular",
+        "joinJam": "Game Jam'e Katıl",
+        "dashboard": "Panel",
+        "login": "Giriş Yap",
+        "logout": "Çıkış Yap"
+    },
+    "hero": {
+        "title": "Oyun Geliştirme Yolculuğunu",
+        "titleHighlight": "Seviye Atlat",
+        "subtitle": "Çiçekli Game Dev, oyun geliştirmeyi öğrendiğimiz, deneyimlerimizi paylaştığımız ve birlikte oyunlar yaptığımız özel bir topluluktur. Haftalık dersler, özel game jam'ler ve destekleyici bir ağ.",
+        "learnMore": "Daha Fazla Bilgi"
+    },
+    "home": {
+        "whyJoin": "Neden Bize Katılmalısın?",
+        "weeklyLessons": "Haftalık Dersler",
+        "weeklyLessonsDesc": "Unity, Unreal, Godot ve oyun tasarımı prensipleri üzerine özel haftalık derslerle yeni beceriler edin.",
+        "jams": "Topluluk Game Jam'leri",
+        "jamsDesc": "Heyecan verici game jam'lerimize katıl. Bazıları sadece bize özel, bazıları ise dünyaya açık. Yeteneklerini göster!",
+        "network": "Destekleyici Ağ",
+        "networkDesc": "Kafa dengi geliştiricilerle tanış, ilerlemeni paylaş, geri bildirim al ve bir sonraki büyük projen için ortaklar bul."
+    },
+    "footer": {
+        "tagline": "Oyun geliştiriyoruz, bilgi paylaşıyoruz ve birlikte büyüyoruz.",
+        "copyright": "Tüm hakları saklıdır."
+    },
+    "login": {
+        "title": "Yönetici Girişi",
+        "username": "Kullanıcı Adı",
+        "password": "Şifre",
+        "rememberMe": "Beni Hatırla",
+        "signIn": "Giriş Yap",
+        "signingIn": "Giriş Yapılıyor...",
+        "errorAuth": "Kullanıcı adı veya şifre hatalı."
+    },
+    "admin": {
+        "title": "Yönetici Paneli",
+        "createPost": "Yeni Gönderi Oluştur",
+        "blogPosts": "Blog Yazıları",
+        "announcements": "Duyurular",
+        "published": "Yayında"
+    },
+    "post": {
+        "createTitle": "Yeni Gönderi Oluştur",
+        "backToDashboard": "Panele Dön",
+        "titleLabel": "Başlık",
+        "typeLabel": "Tür",
+        "excerptLabel": "Özet",
+        "contentLabel": "İçerik",
+        "blogPost": "Blog Yazısı",
+        "announcement": "Duyuru",
+        "saving": "Kaydediliyor..."
+    },
+    "pages": {
+        "blogTitle": "Topluluk Blogu",
+        "blogSubtitle": "Çiçekli Game Dev topluluğundan eğitimler, geliştirme günlükleri ve hikayeler.",
+        "eventsTitle": "Game Jam'ler ve Etkinlikler",
+        "eventsSubtitle": "Kendine meydan oku, yeni beceriler öğren ve toplulukla harika oyunlar yap.",
+        "upcomingEvents": "Yaklaşan Etkinlikler",
+        "pastEvents": "Geçmiş Etkinlikler",
+        "announcementsTitle": "Duyurular",
+        "announcementsSubtitle": "Topluluktan en son haberlerle güncel kalın."
+    }
+}
