@@ -2,10 +2,14 @@
 
 # dependencies
 <<<<<<< HEAD
+<<<<<<< HEAD
 /node_modules/*
 =======
 /node_modules
 >>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
+=======
+/node_modules
+>>>>>>> origin/main
 /.pnp
 .pnp.*
 .yarn/*

@@ -1,9 +1,5 @@
 import { NextResponse } from 'next/server';
-<<<<<<< HEAD
 import { savePost, updatePost, getPostById } from '@/lib/data';
-=======
-import { savePost } from '@/lib/data';
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
 
 export async function POST(request) {
     try {
@@ -30,7 +26,6 @@ export async function POST(request) {
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 }
-<<<<<<< HEAD
 
 export async function PUT(request) {
     try {
@@ -78,5 +73,3 @@ export async function GET(request) {
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 }
-=======
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2

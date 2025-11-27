@@ -20,15 +20,12 @@
   /* Soft Light Green */
   --color-accent: #FFE33F;
   /* Vibrant Yellow */
-<<<<<<< HEAD
   --color-beige: #D4C5A9;
   /* Soft Beige */
   --color-beige-light: rgba(212, 197, 169, 0.15);
   /* Light Beige with transparency */
   --color-beige-dark: #B8A68A;
   /* Darker Beige */
-=======
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
 
   /* Legacy aliases for existing components */
   --color-accent-blue: #2B44D8;
@@ -53,14 +50,8 @@
   --color-btn-bg: #2B44D8;
   --color-btn-text: #FFFFFF;
 
-<<<<<<< HEAD
   /* Fonts - CSS variables are set by Next.js font loader */
   /* --font-heading and --font-body are defined in layout.js */
-=======
-  /* Fonts */
-  --font-heading: var(--font-outfit), sans-serif;
-  --font-body: var(--font-inter), sans-serif;
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
 }
 
 html,
@@ -73,11 +64,7 @@ body {
 body {
   color: var(--color-text-body);
   background: var(--color-bg-primary);
-<<<<<<< HEAD
   font-family: var(--font-body), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-=======
-  font-family: var(--font-body);
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -92,18 +79,11 @@ h3,
 h4,
 h5,
 h6 {
-<<<<<<< HEAD
   font-family: var(--font-heading), 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--color-text-headline);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
-=======
-  font-family: var(--font-heading);
-  color: var(--color-text-headline);
-  font-weight: 700;
-  line-height: 1.2;
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
 }
 
 * {

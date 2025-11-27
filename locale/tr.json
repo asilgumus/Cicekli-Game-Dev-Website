@@ -58,19 +58,12 @@
         "createPost": "Yeni Gönderi Oluştur",
         "blogPosts": "Blog Yazıları",
         "announcements": "Duyurular",
-<<<<<<< HEAD
         "published": "Yayında",
         "edit": "Düzenle"
     },
     "post": {
         "createTitle": "Yeni Gönderi Oluştur",
         "editTitle": "Gönderiyi Düzenle",
-=======
-        "published": "Yayında"
-    },
-    "post": {
-        "createTitle": "Yeni Gönderi Oluştur",
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
         "backToDashboard": "Panele Dön",
         "titleLabel": "Başlık",
         "typeLabel": "Tür",

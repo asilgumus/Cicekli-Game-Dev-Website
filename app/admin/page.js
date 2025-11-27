@@ -2,11 +2,7 @@ import React from 'react';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Button from '@/components/Button';
-<<<<<<< HEAD
 import { Plus, FileText, Megaphone, Edit } from 'lucide-react';
-=======
-import { Plus, FileText, Megaphone } from 'lucide-react';
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
 import { getBlogPosts, getAnnouncements } from '@/lib/data';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -38,14 +34,11 @@ export default function AdminDashboard() {
                             </div>
                             <div className={styles.actions}>
                                 <span className={styles.status}>{t('admin.published')}</span>
-<<<<<<< HEAD
                                 <Link href={`/admin/edit/${post.id}`}>
                                     <Button variant="secondary" icon={Edit} className={styles.editButton}>
                                         {t('admin.edit')}
                                     </Button>
                                 </Link>
-=======
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
                             </div>
                         </div>
                     ))}
@@ -66,14 +59,11 @@ export default function AdminDashboard() {
                             </div>
                             <div className={styles.actions}>
                                 <span className={styles.status}>{t('admin.published')}</span>
-<<<<<<< HEAD
                                 <Link href={`/admin/edit/${post.id}`}>
                                     <Button variant="secondary" icon={Edit} className={styles.editButton}>
                                         {t('admin.edit')}
                                     </Button>
                                 </Link>
-=======
->>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
                             </div>
                         </div>
                     ))}
