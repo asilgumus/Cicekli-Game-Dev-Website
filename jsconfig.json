@@ -1,0 +1,20 @@
+{
+<<<<<<< HEAD
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+=======
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+>>>>>>> a271d8d5cec5f7504332e91aa5f8619fd93e98d2
+        },
+        "types": []
+    },
+    "include": ["**/*"],
+    "exclude": ["node_modules"]
+}

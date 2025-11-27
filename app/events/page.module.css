@@ -1,0 +1,42 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-body);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-main);
+    border-bottom: 2px solid var(--color-border-blue);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
