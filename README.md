@@ -24,7 +24,7 @@ A modern, bilingual (English/Turkish) community website for Çiçekli Game Dev -
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/asilgumus/Cicekli-Game-Dev-Website
 cd Cicekli-Game-Dev-Website
 ```
 
