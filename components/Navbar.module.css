@@ -70,8 +70,23 @@
     width: 100%;
 }
 
+.desktopActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .desktopCta {
     display: block;
+}
+
+.mobileActions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
 }
 
 .mobileCta {
@@ -120,8 +135,21 @@
         box-shadow: var(--shadow-depth);
     }
 
+    .mobileActions {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
     .mobileCta {
         display: block;
-        margin-top: 1rem;
+        flex: 1;
+    }
+
+    .desktopActions {
+        display: none;
     }
 }

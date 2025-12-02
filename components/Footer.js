@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { Twitter, Github, Disc } from 'lucide-react';
+import { Twitter, Github, Instagram } from 'lucide-react';
 import styles from './Footer.module.css';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -16,14 +18,14 @@ const Footer = () => {
                     </div>
 
                     <div className={styles.socials}>
-                        <a href="#" className={styles.socialLink} aria-label="Twitter">
+                        <a href="https://www.linkedin.com/company/cicekli-gamedev/" className={styles.socialLink} aria-label="Twitter">
                             <Twitter size={24} />
                         </a>
-                        <a href="#" className={styles.socialLink} aria-label="GitHub">
+                        <a href="https://github.com/Cicekli-GameDev" className={styles.socialLink} aria-label="GitHub">
                             <Github size={24} />
                         </a>
-                        <a href="#" className={styles.socialLink} aria-label="Discord">
-                            <Disc size={24} />
+                        <a href="https://www.instagram.com/cicekli_gamedev/" className={styles.socialLink} aria-label="Instagram">
+                            <Instagram size={24} />
                         </a>
                     </div>
                 </div>

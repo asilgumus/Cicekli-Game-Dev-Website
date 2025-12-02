@@ -1,0 +1,98 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "success": "Success!",
+        "readMore": "Read More",
+        "readLess": "Read Less",
+        "back": "Back",
+        "backTo": "Back to",
+        "save": "Save",
+        "publish": "Publish",
+        "membersOnly": "Members Only",
+        "openToAll": "Open to All",
+        "community": "Community",
+        "author": "Author"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "events": "Events",
+        "blog": "Blog",
+        "announcements": "Announcements",
+        "joinJam": "Join Game Jam",
+        "dashboard": "Dashboard",
+        "login": "Login",
+        "logout": "Logout"
+    },
+    "hero": {
+        "title": "Level Up Your",
+        "titleHighlight": "Game Development Journey",
+        "subtitle": "Çiçekli Game Dev is a special community where we learn game development, share our experiences, and make games together. Weekly lessons, exclusive game jams, and a supportive network.",
+        "learnMore": "Learn More"
+    },
+    "home": {
+        "whyJoin": "Why Join Us?",
+        "weeklyLessons": "Weekly Lessons",
+        "weeklyLessonsDesc": "Learn new skills with exclusive weekly lessons on Unity, Unreal, Godot, and game design principles.",
+        "jams": "Community Game Jams",
+        "jamsDesc": "Join our exciting game jams. Some are exclusive to us, some are open to the world. Show your skills!",
+        "network": "Supportive Network",
+        "networkDesc": "Meet like-minded developers, share your progress, get feedback, and find partners for your next big project."
+    },
+    "footer": {
+        "tagline": "We develop games, share knowledge, and grow together.",
+        "copyright": "All rights reserved."
+    },
+    "login": {
+        "title": "Admin Login",
+        "username": "Username",
+        "password": "Password",
+        "rememberMe": "Remember Me",
+        "signIn": "Sign In",
+        "signingIn": "Signing in...",
+        "errorAuth": "Invalid username or password."
+    },
+    "admin": {
+        "title": "Admin Panel",
+        "createPost": "Create New Post",
+        "blogPosts": "Blog Posts",
+        "announcements": "Announcements",
+        "published": "Published",
+        "edit": "Edit",
+        "eventsTitle": "Events",
+        "upcomingEvent": "Upcoming Event",
+        "pastEvent": "Past Event"
+    },
+    "post": {
+        "createTitle": "Create New Post",
+        "editTitle": "Edit Post",
+        "backToDashboard": "Back to Dashboard",
+        "titleLabel": "Title",
+        "typeLabel": "Type",
+        "excerptLabel": "Excerpt",
+        "contentLabel": "Content",
+        "blogPost": "Blog Post",
+        "announcement": "Announcement",
+        "saving": "Saving...",
+        "eventUpcoming": "Event (Upcoming)",
+        "eventPast": "Event (Past)",
+        "eventDateLabel": "Event Date",
+        "tagLabel": "Event Tag",
+        "tagPlaceholder": "e.g., Online, Workshop, Game Jam",
+        "imageLabel": "Cover Image",
+        "imageUrlPlaceholder": "Or enter an image URL",
+        "uploadingImage": "Uploading image..."
+    },
+    "pages": {
+        "blogTitle": "Community Blog",
+        "blogSubtitle": "Tutorials, dev logs, and stories from the Çiçekli Game Dev community.",
+        "eventsTitle": "Game Jams & Events",
+        "eventsSubtitle": "Challenge yourself, learn new skills, and make amazing games with the community.",
+        "upcomingEvents": "Upcoming Events",
+        "pastEvents": "Past Events",
+        "announcementsTitle": "Announcements",
+        "announcementsSubtitle": "Stay updated with the latest news from the community."
+    }
+}
+

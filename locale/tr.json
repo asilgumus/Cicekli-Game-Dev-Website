@@ -59,7 +59,10 @@
         "blogPosts": "Blog Yazıları",
         "announcements": "Duyurular",
         "published": "Yayında",
-        "edit": "Düzenle"
+        "edit": "Düzenle",
+        "eventsTitle": "Etkinlikler",
+        "upcomingEvent": "Yaklaşan Etkinlik",
+        "pastEvent": "Geçmiş Etkinlik"
     },
     "post": {
         "createTitle": "Yeni Gönderi Oluştur",
@@ -71,7 +74,15 @@
         "contentLabel": "İçerik",
         "blogPost": "Blog Yazısı",
         "announcement": "Duyuru",
-        "saving": "Kaydediliyor..."
+        "saving": "Kaydediliyor...",
+        "eventUpcoming": "Etkinlik (Yaklaşan)",
+        "eventPast": "Etkinlik (Geçmiş)",
+        "eventDateLabel": "Etkinlik Tarihi",
+        "tagLabel": "Etkinlik Etiketi",
+        "tagPlaceholder": "Örn: Online, Atölye, Game Jam",
+        "imageLabel": "Kapak Görseli",
+        "imageUrlPlaceholder": "Veya bir görsel URL'si girin",
+        "uploadingImage": "Görsel yükleniyor..."
     },
     "pages": {
         "blogTitle": "Topluluk Blogu",

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X, Gamepad2 } from 'lucide-react';
 import styles from './Navbar.module.css';
 import Button from './Button';
+import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation } from '@/hooks/useTranslation';
 
 const Navbar = () => {
@@ -29,17 +30,14 @@ const Navbar = () => {
                     <Link href="/events" className={styles.link} onClick={() => setIsOpen(false)}>{t('nav.events')}</Link>
                     <Link href="/blog" className={styles.link} onClick={() => setIsOpen(false)}>{t('nav.blog')}</Link>
                     <Link href="/announcements" className={styles.link} onClick={() => setIsOpen(false)}>{t('nav.announcements')}</Link>
-                    <div className={styles.mobileCta}>
-                        <Link href="/events">
-                            <Button variant="primary">{t('nav.joinJam')}</Button>
-                        </Link>
-                    </div>
+                    
                 </div>
 
-                <div className={styles.desktopCta}>
+                <div className={styles.desktopActions}>
                     <Link href="/events">
                         <Button variant="primary">{t('nav.joinJam')}</Button>
                     </Link>
+                    <LanguageSwitcher />
                 </div>
 
                 <button className={styles.menuToggle} onClick={toggleMenu} aria-label="Toggle Menu">

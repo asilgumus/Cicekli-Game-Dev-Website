@@ -1,7 +1,6 @@
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ClientLayout from "./ClientLayout";
 
 const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
@@ -24,13 +23,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="tr">
+        <html lang="en">
             <body className={`${spaceGrotesk.variable} ${inter.variable}`}>
-                <Navbar />
-                <main style={{ flex: 1 }}>
-                    {children}
-                </main>
-                <Footer />
+                <ClientLayout>{children}</ClientLayout>
             </body>
         </html>
     );

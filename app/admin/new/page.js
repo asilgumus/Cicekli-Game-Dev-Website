@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styles from './page.module.css';
 import Button from '@/components/Button';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Save } from 'lucide-react';
+import { ArrowLeft, Save, Image as ImageIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -12,13 +12,47 @@ export default function NewPost() {
     const router = useRouter();
     const { t } = useTranslation();
     const [loading, setLoading] = useState(false);
+    const [uploading, setUploading] = useState(false);
     const [formData, setFormData] = useState({
         title: '',
         excerpt: '',
         content: '',
         type: 'blog',
-        author: 'Admin'
+        author: 'Admin',
+        eventDate: '',
+        tag: '',
+        imageUrl: ''
     });
+
+    const handleFileChange = async (e) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        setUploading(true);
+        try {
+            const data = new FormData();
+            data.append('file', file);
+
+            const res = await fetch('/api/upload', {
+                method: 'POST',
+                body: data,
+            });
+
+            if (!res.ok) {
+                throw new Error('Upload failed');
+            }
+
+            const json = await res.json();
+            if (json?.url) {
+                setFormData((prev) => ({ ...prev, imageUrl: json.url }));
+            }
+        } catch (error) {
+            console.error('Upload error:', error);
+            alert(t('common.error'));
+        } finally {
+            setUploading(false);
+        }
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -47,6 +81,9 @@ export default function NewPost() {
         }
     };
 
+    const isEvent =
+        formData.type === 'event_upcoming' || formData.type === 'event_past';
+
     return (
         <div className={styles.container}>
             <Link href="/admin" className={styles.backLink}>
@@ -63,7 +100,9 @@ export default function NewPost() {
                         id="title"
                         required
                         value={formData.title}
-                        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                        onChange={(e) =>
+                            setFormData({ ...formData, title: e.target.value })
+                        }
                         className={styles.input}
                     />
                 </div>
@@ -73,13 +112,59 @@ export default function NewPost() {
                     <select
                         id="type"
                         value={formData.type}
-                        onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                        onChange={(e) =>
+                            setFormData({ ...formData, type: e.target.value })
+                        }
                         className={styles.select}
                     >
                         <option value="blog">{t('post.blogPost')}</option>
-                        <option value="announcement">{t('post.announcement')}</option>
+                        <option value="announcement">
+                            {t('post.announcement')}
+                        </option>
+                        <option value="event_upcoming">
+                            {t('post.eventUpcoming')}
+                        </option>
+                        <option value="event_past">
+                            {t('post.eventPast')}
+                        </option>
                     </select>
                 </div>
+
+                {isEvent && (
+                    <div className={styles.formGroup}>
+                        <label htmlFor="eventDate">
+                            {t('post.eventDateLabel')}
+                        </label>
+                        <input
+                            type="date"
+                            id="eventDate"
+                            value={formData.eventDate}
+                            onChange={(e) =>
+                                setFormData({
+                                    ...formData,
+                                    eventDate: e.target.value,
+                                })
+                            }
+                            className={styles.input}
+                        />
+                    </div>
+                )}
+
+                {isEvent && (
+                    <div className={styles.formGroup}>
+                        <label htmlFor="tag">{t('post.tagLabel')}</label>
+                        <input
+                            type="text"
+                            id="tag"
+                            value={formData.tag}
+                            onChange={(e) =>
+                                setFormData({ ...formData, tag: e.target.value })
+                            }
+                            className={styles.input}
+                            placeholder={t('post.tagPlaceholder')}
+                        />
+                    </div>
+                )}
 
                 <div className={styles.formGroup}>
                     <label htmlFor="excerpt">{t('post.excerptLabel')}</label>
@@ -87,7 +172,9 @@ export default function NewPost() {
                         id="excerpt"
                         required
                         value={formData.excerpt}
-                        onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
+                        onChange={(e) =>
+                            setFormData({ ...formData, excerpt: e.target.value })
+                        }
                         className={styles.textarea}
                         rows={3}
                     />
@@ -99,14 +186,64 @@ export default function NewPost() {
                         id="content"
                         required
                         value={formData.content}
-                        onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+                        onChange={(e) =>
+                            setFormData({ ...formData, content: e.target.value })
+                        }
                         className={styles.textarea}
                         rows={10}
                     />
                 </div>
 
+                <div className={styles.formGroup}>
+                    <label htmlFor="image">{t('post.imageLabel')}</label>
+                    <div className={styles.imageRow}>
+                        <div className={styles.fileInputWrapper}>
+                            <input
+                                type="file"
+                                id="image"
+                                accept="image/*"
+                                onChange={handleFileChange}
+                            />
+                        </div>
+                        <span className={styles.orText}>/</span>
+                        <input
+                            type="text"
+                            placeholder={t('post.imageUrlPlaceholder')}
+                            value={formData.imageUrl}
+                            onChange={(e) =>
+                                setFormData({
+                                    ...formData,
+                                    imageUrl: e.target.value,
+                                })
+                            }
+                            className={styles.input}
+                        />
+                    </div>
+                    {uploading && (
+                        <p className={styles.uploadInfo}>
+                            <ImageIcon size={16} />{' '}
+                            {t('post.uploadingImage')}
+                        </p>
+                    )}
+                    {formData.imageUrl && (
+                        <div className={styles.imagePreview}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={formData.imageUrl}
+                                alt="preview"
+                                className={styles.image}
+                            />
+                        </div>
+                    )}
+                </div>
+
                 <div className={styles.actions}>
-                    <Button type="submit" variant="primary" icon={Save} disabled={loading}>
+                    <Button
+                        type="submit"
+                        variant="primary"
+                        icon={Save}
+                        disabled={loading}
+                    >
                         {loading ? t('post.saving') : t('common.publish')}
                     </Button>
                 </div>

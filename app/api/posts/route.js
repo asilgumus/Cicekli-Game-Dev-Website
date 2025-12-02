@@ -15,7 +15,14 @@ export async function POST(request) {
             slug: body.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, ''),
             date: new Date().toISOString().split('T')[0],
             author: 'Admin', // Hardcoded for now
-            ...body
+            // Opsiyonel alanlar (etkinlik bilgileri ve görsel)
+            excerpt: body.excerpt || '',
+            content: body.content,
+            type: body.type,
+            author: body.author || 'Admin',
+            eventDate: body.eventDate || null,
+            tag: body.tag || null,
+            imageUrl: body.imageUrl || null,
         };
 
         savePost(newPost);
@@ -41,7 +48,10 @@ export async function PUT(request) {
             excerpt: body.excerpt,
             content: body.content,
             type: body.type,
-            author: body.author || 'Admin'
+            author: body.author || 'Admin',
+            eventDate: body.eventDate || null,
+            tag: body.tag || null,
+            imageUrl: body.imageUrl || null,
         });
 
         return NextResponse.json({ success: true, post: updatedPost });

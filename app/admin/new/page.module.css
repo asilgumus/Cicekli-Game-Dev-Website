@@ -70,3 +70,38 @@
     justify-content: flex-end;
     margin-top: 2rem;
 }
+
+.imageRow {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fileInputWrapper input[type="file"] {
+    font-size: 0.9rem;
+}
+
+.orText {
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.uploadInfo {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.imagePreview {
+    margin-top: 0.75rem;
+}
+
+.imagePreview img {
+    max-width: 200px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border-subtle);
+}
